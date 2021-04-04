@@ -1,3 +1,4 @@
+var scroll = new ScrollWatcher();
 const textEl = document.querySelector('.fsy-short-about')
 const metricsContainer = document.querySelector('.fsy-about-metrics')
 const shortAbout = ['Lifestyle Vlogger', 'Vlog bout travel', 'vlog bout new life / University', 'zaurus unsigned model']
@@ -42,9 +43,10 @@ async function writeText(array) {
 }
 
 writeText(shortAbout)
-
 /**counting animation for values */
-document.addEventListener("DOMContentLoaded", () => {
+scroll
+  .watch(".fsy-about-metrics")
+  .on("enter", function(evt) {    
     function counter(id, start, end, duration) {
         let obj = document.querySelector(id),        
          current = start,
@@ -62,4 +64,4 @@ document.addEventListener("DOMContentLoaded", () => {
     counter(".fsy-metrics-subscribers", 0, 100, 3000);
     counter(".fsy-metrics-videos", 0, 8, 3000);
     counter(".fsy-metrics-engagements", 0, 1000, 3000);
-   });
+  })
