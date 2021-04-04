@@ -1,0 +1,289 @@
+:root {
+    --black: rgb(1, 1, 0);
+    --bright-blue: rgb(248, 251, 252);
+    --light-gray: rgb(238, 240, 243);
+    --bg: rgba(0,0,0, 0.11);
+}
+* {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+body {
+    background-color: var(--bg);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    font-size: 18px;
+    line-height: 8.5rem;
+    z-index: 2;
+}
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.fsy-top {
+    min-height: 100vh;    
+    display: flex;
+    
+}
+.hmm {
+    height: 70vh;
+}
+.background-naming {    
+    height: 100vh;
+    width: 60vw;    
+    max-width: calc(100vw - 150px);
+    color: var(--light-gray);    
+    font-family: 'DM Serif Text';    
+    top: -25rem;
+    z-index: -1;
+    left: 0;
+    align-self: flex-start;           
+}
+.background-naming p {
+    font-weight: 900;  
+    font-size: 100vh;  
+    line-height: 91px;
+}
+.inner {
+    margin-top: 50vh;
+    margin-left: 45rem;
+    height: 100%;
+}
+.fsy-name {
+    text-transform: uppercase;
+    font-family: 'DM Serif Text';
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 55px;
+    color: black;
+}
+.fsy-short-about {
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 1;
+}
+.fsy-view-vlog {
+    color: rgb(134, 135, 135);
+    width: 280px;
+    padding: .95rem 1rem;
+    height: 50px;
+    font-size: 20px;
+}
+.fsy-view-vlog svg {
+    height: 30;
+    width: 30;
+    margin-left: 1.5rem;
+}
+.fsy-top-image-container {
+    height: 440px;
+    margin-left: 150px;
+    position: relative;
+}
+.fsy-image-one {
+    position: relative;
+}
+.fsy-image-two {        
+    height: 300px;
+    left: 76px;
+    bottom: -57px;
+    border-radius: 10px;
+    transition: all 0.45s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.fsy-image-two:hover {
+    transform: scale(1.4);
+}
+.fsy-top-image-container::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 2px dashed black;
+    position: absolute;
+    right: -40px;
+    top: 30px;
+    z-index: -1;
+}
+.fsy-what-i-do {
+    bottom: -9rem;
+}
+.fsy-wid-item {
+    text-transform: uppercase;
+    font-family: 'DM Serif Text';
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 35px;
+    z-index: 10;
+    position: relative;
+    transition: color 0.1s ease-out;
+    transition-delay: 0.45s;
+}
+.fsy-wid-item:before {
+    content: '';
+    background: black;
+    width: 0;
+    height: 28px;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    transition: width 0.45s cubic-bezier(0.39, 0.575, 0.565, 1), height 0.45s 0.35s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.fsy-wid-item:hover {
+    color: var(--light-gray);
+}
+.fsy-wid-item:hover::before {
+    width: 120%;;
+    height: 100%;
+    left: -18px;
+}
+/*mobile responsiveness for the top section*/
+@media (max-width: 750px) {
+    body {
+        font-size: 14px;
+    }
+    .fsy-top {
+        min-height: calc(100vh - 95px);        
+    }
+    .hmm {
+        height: fit-content;
+        padding: 1.5rem 2rem;
+        margin-bottom: 10rem;
+    }
+    .background-naming {
+        top: 0;
+    }
+    .logo {
+        height: 70px;
+    }
+    .background-naming p {
+        font-size: 50vh;
+    }
+    .inner {
+        margin-top: 20vh;
+        margin-left: 20rem;
+    }
+    .fsy-name {
+        font-size: 35px;
+        line-height: 5.5rem;
+    }
+    .fsy-short-about {
+        font-size: 18px;
+        line-height: 0.35;
+    }
+    .fsy-top-image-container {
+        margin-left: 0px;
+        height: 300px
+    }
+    .fsy-image-one {
+        height: inherit;
+    }
+    .fsy-image-two {
+        height: 150px;
+        left: 8px;
+        bottom: -13px;
+    }
+    .fsy-top-images {
+        margin-top: 5rem;
+    }
+}
+/**about section**/
+.fsy-about {
+    min-height: 100vh;
+    background-image: url(../images/cyprus.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;    
+    background-color: rgb(1 1 0 / 38%);
+    background-position: bottom right;
+}
+.fsy-about-title {
+    color: black;
+    font-weight: 900;
+    font-size: 8rem;
+}
+.fsy-about-writeup {
+    font-size: 16px;
+}
+.fsy-about-writeup-top
+ {
+     font-family: 'DM Serif Text', serif;
+    line-height: 30px;
+    font-weight: 500;
+}
+.fsy-about-writeup-below {
+    line-height: 28px;
+    color: #242121e0;
+}
+.fsy-about-social-link {
+    color: black;
+    font-size: 4rem;
+    font-weight: 700;
+}
+.fsy-about-socials h5 {
+    color: #ffffffa1;
+    line-height: initial;
+}
+.fsy-about-social-link a:hover,
+.fsy-about-social-link a:focus {
+    color: white;
+}
+.fsy-about-metrics {
+    color: var(--light-gray);
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: uppercase;
+    position: relative;
+}
+.fsy-about-metrics::before,
+.fsy-about-metrics::after {
+    content: '';
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    position: absolute;    
+}
+.fsy-about-metrics::before {
+    top: -10px;
+}
+.fsy-about-metrics::after {
+    bottom: -10px;
+}
+.fsy-about-metrics div h4 {
+    font-size: 5rem;
+}
+.fsy-about-metrics div p{
+    line-height: 30px;
+}
+.fsy-contact {
+    min-height: 100vh;
+}
+/*fsy about responsiveness*/
+@media (max-width: 750px) {
+    .fsy-about-writeup {
+        padding: 1.5rem 2rem;
+    }
+    .fsy-about-writeup-below {
+        margin-top: 30px !important;
+    }
+    .fsy-about-socials  {
+        margin-top: 30px;
+    }
+    .fsy-about-metrics {
+        margin: 1.5rem 2rem;
+        font-size: 20px;
+    }
+    .fsy-about-metrics::before {
+        top: 20px;
+    }
+    .fsy-about-metrics div h4 {
+        font-size: 4rem;
+    }
+}
