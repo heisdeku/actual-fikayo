@@ -65,3 +65,21 @@ scroll
     counter(".fsy-metrics-videos", 0, 8, 3000);
     counter(".fsy-metrics-engagements", 0, 45, 3000);
   })
+
+function sendMail(name, mail, subject, body) {
+    const link = "mailto:heyferanmi@gmail.com"
+             + `?cc=${mail}`
+             + `&subject= + ${encodeURIComponent(`${subject}`)}`
+             + "&body=" + encodeURIComponent(`Hi my name is ${name}, <br /> <br /> ${body}`)
+    ;
+    
+    window.location.href = link;
+}
+document.querySelector('#fsy-form').addEventListener('submit', e => {
+    e.preventDefault()
+    let name = document.querySelector('#contact-name').value;
+    let mail = document.querySelector('#contact-mail').value;
+    let subject = document.querySelector('#contact-subject').value;
+    let message = document.querySelector('#contact-message').value;
+    sendMail(name, mail, subject, message)
+})
