@@ -150,6 +150,14 @@ body {
     left: -18px;
 }
 /*mobile responsiveness for the top section*/
+@media (max-width: 350px) {
+    .background-naming p {
+        font-size: 30vh !important;
+    }
+    .fsy-wid-item {
+        font-size: 16px !important;
+    }
+}
 @media (max-width: 750px) {
     body {
         font-size: 14px;
