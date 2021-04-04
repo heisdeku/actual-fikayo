@@ -63,5 +63,5 @@ scroll
        } 
     counter(".fsy-metrics-subscribers", 0, 100, 3000);
     counter(".fsy-metrics-videos", 0, 8, 3000);
-    counter(".fsy-metrics-engagements", 0, 1000, 3000);
+    counter(".fsy-metrics-engagements", 0, 45, 3000);
   })
