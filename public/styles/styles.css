@@ -309,11 +309,11 @@ body {
     .fsy-about-metrics div h4 {
         font-size: 4rem;
     }
+    .fsy-contact {
+        padding: 1.5rem 2rem;
+    }
 }
 /*fsy contact section*/
-.fsy-contact {
-    
-}
 .fsy-shot-shooting {
     color: rgb(0 0 0 / 39%);
     font-weight: 700;

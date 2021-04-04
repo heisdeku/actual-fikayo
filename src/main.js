@@ -69,8 +69,8 @@ scroll
 function sendMail(name, mail, subject, body) {
     const link = "mailto:heyferanmi@gmail.com"
              + `?cc=${mail}`
-             + `&subject= + ${encodeURIComponent(`${subject}`)}`
-             + "&body=" + encodeURIComponent(`Hi my name is ${name}, <br /> <br /> ${body}`)
+             + `&subject= ${encodeURIComponent(`${subject}`)}`
+             + "&body=" + encodeURIComponent(`Hi my name is ${name} \n \n \n ${body}`)
     ;
     
     window.location.href = link;
