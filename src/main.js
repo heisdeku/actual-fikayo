@@ -1,7 +1,7 @@
 var scroll = new ScrollWatcher();
 const textEl = document.querySelector('.fsy-short-about')
 const metricsContainer = document.querySelector('.fsy-about-metrics')
-const shortAbout = ['Lifestyle Vlogger', 'Vlog bout travel', 'vlog bout new life / University', 'zaurus unsigned model']
+const shortAbout = ['Lifestyle Vlogger', 'Vlog about travel', 'vlog about living in Cyprus/university student', 'fashionista']
 
 function waitForMs(ms) {
     return new Promise(resolve => setTimeout(resolve, ms))
@@ -67,7 +67,7 @@ scroll
   })
 
 function sendMail(name, mail, subject, body) {
-    const link = "mailto:heyferanmi@gmail.com"
+    const link = "mailto:actual.fikayo@gmail.com"
              + `?cc=${mail}`
              + `&subject= ${encodeURIComponent(`${subject}`)}`
              + "&body=" + encodeURIComponent(`Hi my name is ${name} \n \n \n ${body}`)

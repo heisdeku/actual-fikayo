@@ -35,13 +35,13 @@ body {
 }
 
 .fsy-top {
-    min-height: 100vh;    
+    min-height: calc(100vh - 93px);    
     display: flex;
-    
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 93px;
 }
-.hmm {
-    height: 70vh;
-}
+
 .background-naming {    
     height: 100vh;
     width: 60vw;    
@@ -75,7 +75,7 @@ body {
     text-transform: uppercase;
     font-size: 25px;
     line-height: 1;
-    height: 6px;
+    min-height: 6px;
 }
 .fsy-view-vlog {
     color: rgb(134, 135, 135);
@@ -189,7 +189,7 @@ body {
     }
     .fsy-short-about {
         font-size: 18px;
-        line-height: 0.35;
+        line-height: 1.25;
     }
     .fsy-top-image-container {
         margin-left: 0px;
@@ -240,7 +240,7 @@ body {
 }
 .fsy-about-writeup-below {
     line-height: 28px;
-    color: #242121e0;
+    color: white;
 }
 .fsy-about-social-link {
     color: white;
